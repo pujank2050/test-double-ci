@@ -1,0 +1,14 @@
+name: React build
+
+on:
+  push:
+    branches-ignore: ["*-develop", "[0-9]?[0-9].[0-9]?[0-9]"]
+    tags-ignore: ['**']
+    paths: [".github/workflows/action-react-build.yml", "apps/react/**"]
+
+jobs:
+  react_build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run docker
+        run: echo "Print THIS IS PRINT FROM REACT BUILD"

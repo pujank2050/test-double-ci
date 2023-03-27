@@ -1,0 +1,13 @@
+name: Api develop build
+
+on:
+  push:
+    branches: ["0.9-develop"]
+    paths: [".github/workflows/action-api-develop-build.yml", "apps/api/**", "libs/core/**"]
+
+jobs:
+  api_develop_build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run docker
+        run: echo "Print THIS IS PRINT FROM API DEVELOP BUILD"

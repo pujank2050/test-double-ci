@@ -1,0 +1,13 @@
+name: React develop build
+
+on:
+  push:
+    branches: ["0.9-develop"]
+    paths: [".github/workflows/action-react-develop-build.yml", "apps/react/**"]
+
+jobs:
+  api_develop_build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run docker
+        run: echo "Print THIS IS PRINT FROM React DEVELOP BUILD"
